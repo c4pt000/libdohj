@@ -273,8 +273,11 @@ public class AltcoinBlock extends org.bitcoinj.core.Block {
             if (hashVal.compareTo(target) < 0) {
                 // Proof of work check failed!
                 if (throwException)
-                    throw new VerificationException("Hash is higher than target: " + org.libdohj.core.Utils.formatAsHash(hashVal) + " vs "
-                            + target.toString(16));
+                    System.out.println("Hash is higher than target: ");
+                                                           return false;
+
+                    //throw new VerificationException("Hash is higher than target: " + org.libdohj.core.Utils.formatAsHash(hashVal) + " vs "
+                      //      + target.toString(16));
                 else
                     return false;
             }
