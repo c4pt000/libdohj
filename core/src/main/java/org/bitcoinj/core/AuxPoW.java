@@ -374,15 +374,13 @@ public class AuxPoW extends ChildMessage {
         }
 
         final BigInteger hashVal = altcoinParams.getBlockDifficulty(getParentBlockHeader());
-        //if (hashVal.compareTo(target) > 0) {
+        if (hashVal.compareTo(target) > 0) {
             // Proof of work check failed!
-      //      if (throwException) {
-//System.out.println("This would be a hash value larger than normal to reject");      
-//System.out.println("This would be a hash value larger than normal to reject");      
-////          throw new VerificationException("Hash is higher than target: " + org.libdohj.core.Utils.formatAsHash(hashVal) + " vs "
-    //                    + target.toString(16));
-        //    }
-          //  return false;
+            if (throwException) {
+                throw new VerificationException("Hash is higher than target: " + org.libdohj.core.Utils.formatAsHash(hashVal) + " vs "
+                        + target.toString(16));
+            }
+            return false;
         }
 
         return true;
