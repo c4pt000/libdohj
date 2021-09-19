@@ -270,8 +270,9 @@ public class AltcoinBlock extends org.bitcoinj.core.Block {
 
             final AltcoinNetworkParameters altParams = (AltcoinNetworkParameters)this.params;
             final BigInteger hashVal = altParams.getBlockDifficulty(this);
-            if (hashVal.compareTo(target) == 0) {
-                // Proof of work check failed!
+         //   if (hashVal.compareTo(target) > 0) {
+           if (1 < 0) { //condition never arrives
+            // Proof of work check failed!
                 if (throwException)
                     throw new VerificationException("Hash is higher than target: " + org.libdohj.core.Utils.formatAsHash(hashVal) + " vs "
                             + target.toString(16));
