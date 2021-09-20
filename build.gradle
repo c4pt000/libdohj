@@ -2,6 +2,8 @@ buildscript {
     repositories {
         jcenter()
         mavenCentral()
+                google()
+
     }
 
     dependencies {
@@ -11,7 +13,11 @@ buildscript {
 
 allprojects {
     repositories {
+         mavenLocal()
         jcenter()
+        google()
+    maven { url "https://jitpack.io" }
+
     }
 
     group = 'com.dogecoin'
