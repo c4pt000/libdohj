@@ -119,7 +119,7 @@ public abstract class AbstractDogecoinParams extends NetworkParameters implement
         newInterval = DOGE_INTERVAL_NEW;
         targetTimespan = DOGE_TARGET_TIMESPAN;
         newTargetTimespan = DOGE_TARGET_TIMESPAN_NEW;
-        maxTarget = Utils.decodeCompactBits(0x1e0fffffL);
+        maxTarget = Utils.decodeCompactBits(0x1e0ffff0L);
         diffChangeTarget = setDiffChangeTarget;
 // https://github.com/c4pt000/radiocoin/blob/c2c4c5f9dbf38b985b43077d506c161a3e91a8df/src/chainparams.cpp#L180
         
