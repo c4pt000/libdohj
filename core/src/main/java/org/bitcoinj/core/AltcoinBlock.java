@@ -257,7 +257,7 @@ public class AltcoinBlock extends org.bitcoinj.core.Block {
     }
 
     /** Returns true if the hash of the block is OK (lower than difficulty target). */
-    protected boolean checkProofOfWork(boolean throwException) throws VerificationException {
+   /* protected boolean checkProofOfWork(boolean throwException) throws VerificationException {
         if (params instanceof AltcoinNetworkParameters) {
             BigInteger target = getDifficultyTargetAsInteger();
 
@@ -289,7 +289,9 @@ public class AltcoinBlock extends org.bitcoinj.core.Block {
             return super.checkProofOfWork(throwException);
         }
     }
-
+*/
+    
+    
     /**
      * Checks the block data to ensure it follows the rules laid out in the network parameters. Specifically,
      * throws an exception if the proof of work is invalid, or if the timestamp is too far from what it should be.
