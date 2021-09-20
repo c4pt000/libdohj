@@ -242,6 +242,7 @@ public class AuxPoW extends ChildMessage {
      * @param hashAuxBlock hash of the block the AuxPoW header is attached to.
      * @param target the difficulty target after decoding from compact bits.
      */
+	/*
     protected boolean checkProofOfWork(Sha256Hash hashAuxBlock,
         BigInteger target, boolean throwException) throws VerificationException {
         if (!(params instanceof AuxPoWNetworkParameters)) {
@@ -385,7 +386,7 @@ public class AuxPoW extends ChildMessage {
 
     //    return true;
     }
-
+*/
     /**
      * Get the nonce value from the coinbase transaction script.
      *
