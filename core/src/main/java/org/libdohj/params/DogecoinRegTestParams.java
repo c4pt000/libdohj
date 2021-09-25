@@ -1,6 +1,6 @@
 // built from https://raw.githubusercontent.com/c4pt000/libdohj/main/core/src/main/java/org/libdohj/params/DogecoinTestNet3Params.java
 
-
+// THESE ARE NOT ACTUALLY REGTEST VALUES FROM RADIOCOIN/SRC/CHAINPARAMS.CPP THESE ARE STILL THE DEFAULT RADIOCOIN TESTNET VALUES
 
 /*
  * Copyright 2013 Google Inc.
@@ -31,15 +31,15 @@ import static com.google.common.base.Preconditions.checkState;
  * relaxed rules suitable for development and testing of applications and new
  * Dogecoin versions.
  */
-public class DogecoinTestNet3Params extends AbstractDogecoinParams {
+public class DogecoinRegNetParams extends AbstractDogecoinParams {
     public static final int TESTNET_MAJORITY_WINDOW = 1000;
     public static final int TESTNET_MAJORITY_REJECT_BLOCK_OUTDATED = 750;
     public static final int TESTNET_MAJORITY_ENFORCE_BLOCK_UPGRADE = 501;
     protected static final int DIFFICULTY_CHANGE_TARGET = 145000;
 
-    public DogecoinTestNet3Params() {
+    public DogecoinRegNetParams() {
         super(DIFFICULTY_CHANGE_TARGET);
-        id = ID_DOGE_TESTNET;
+        id = ID_DOGE_REGTEST;
 
         packetMagic = 0xfcc1b7dc;
 
@@ -71,10 +71,10 @@ public class DogecoinTestNet3Params extends AbstractDogecoinParams {
         bip32HeaderP2PKHpriv = 0x04358394;
     }
 
-    private static DogecoinTestNet3Params instance;
-    public static synchronized DogecoinTestNet3Params get() {
+    private static DogecoinRegNetParams instance;
+    public static synchronized DogecoinRegNetParams get() {
         if (instance == null) {
-            instance = new DogecoinTestNet3Params();
+            instance = new DogecoinRegNetParams();
         }
         return instance;
     }
@@ -87,11 +87,11 @@ public class DogecoinTestNet3Params extends AbstractDogecoinParams {
     @Override
     public String getPaymentProtocolId() {
         // TODO: CHANGE ME
-        return PAYMENT_PROTOCOL_ID_TESTNET;
+        return PAYMENT_PROTOCOL_ID_REGTEST;
     }
 
     @Override
-    public boolean isTestNet() {
+    public boolean isRegNet() {
         return true;
     }
 }
