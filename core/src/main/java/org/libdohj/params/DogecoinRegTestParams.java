@@ -1,10 +1,5 @@
-// built from https://raw.githubusercontent.com/c4pt000/libdohj/main/core/src/main/java/org/libdohj/params/DogecoinTestNet3Params.java
-
-// THESE ARE NOT ACTUALLY REGTEST VALUES FROM RADIOCOIN/SRC/CHAINPARAMS.CPP THESE ARE STILL THE DEFAULT RADIOCOIN TESTNET VALUES
-
 /*
  * Copyright 2013 Google Inc.
- * Copyright 2014 Andreas Schildbach
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,84 +16,88 @@
 
 package org.libdohj.params;
 
-import org.bitcoinj.core.Utils;
-import org.spongycastle.util.encoders.Hex;
+import org.bitcoinj.core.Block;
+import org.bitcoinj.core.StoredBlock;
+import org.bitcoinj.core.VerificationException;
+import org.bitcoinj.store.BlockStore;
+import org.bitcoinj.store.BlockStoreException;
+
+import java.math.BigInteger;
 
 import static com.google.common.base.Preconditions.checkState;
 
 /**
- * Parameters for the Dogecoin testnet, a separate public network that has
- * relaxed rules suitable for development and testing of applications and new
- * Dogecoin versions.
+ * Network parameters for the regression test mode of dogecoin in which all blocks are trivially solvable.
  */
-public class DogecoinRegNetParams extends AbstractDogecoinParams {
-  
-    
-    /*
-    public static final int TESTNET_MAJORITY_WINDOW = 1000;
-    public static final int TESTNET_MAJORITY_REJECT_BLOCK_OUTDATED = 750;
-    public static final int TESTNET_MAJORITY_ENFORCE_BLOCK_UPGRADE = 501;
-    protected static final int DIFFICULTY_CHANGE_TARGET = 145000;
+public class DogecoinRegTestParams extends DogecoinTestNet3Params {
+    private static final BigInteger MAX_TARGET = new BigInteger("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff", 16);
 
-    public DogecoinRegNetParams() {
-        super(DIFFICULTY_CHANGE_TARGET);
+    public DogecoinRegTestParams() {
+        super();
+        // Difficulty adjustments are disabled for regtest.
+        // By setting the block interval for difficulty adjustments to Integer.MAX_VALUE we make sure difficulty never changes.
+        interval = Integer.MAX_VALUE;
+        maxTarget = MAX_TARGET;
+        subsidyDecreaseBlockCount = 150;
+        port = 18444;
         id = ID_DOGE_REGTEST;
-
-        packetMagic = 0xfcc1b7dc;
-
-        maxTarget = Utils.decodeCompactBits(0x1e0fffffL);
-        port = 44556;
-        addressHeader = 113;
-        p2shHeader = 196;
-        dumpedPrivateKeyHeader = 241;
-        segwitAddressHrp = "tdge";
-        genesisBlock.setTime(1391503289L);
-        genesisBlock.setDifficultyTarget(0x1e0ffff0L);
-        genesisBlock.setNonce(997879);
-        spendableCoinbaseDepth = 30;
-        subsidyDecreaseBlockCount = 100000;
-        String genesisHash = genesisBlock.getHashAsString();
-        checkState(genesisHash.equals("bb0a78264637406b6360aad926284d544d7049f45189db5664f3c4d07350559e"));
-        alertSigningKey = Hex.decode("042756726da3c7ef515d89212ee1705023d14be389e25fe15611585661b9a20021908b2b80a3c7200a0139dd2b26946606aab0eef9aa7689a6dc2c7eee237fa834");
-
-        majorityEnforceBlockUpgrade = TESTNET_MAJORITY_ENFORCE_BLOCK_UPGRADE;
-        majorityRejectBlockOutdated = TESTNET_MAJORITY_REJECT_BLOCK_OUTDATED;
-        majorityWindow = TESTNET_MAJORITY_WINDOW;
-
-        dnsSeeds = new String[] {
-            "testseed.jrn.me.uk"
-        };
-        // Note this is the same as the BIP32 testnet, as BIP44 makes HD wallets
-        // chain agnostic. Dogecoin mainnet has its own headers for legacy reasons.
-        bip32HeaderP2PKHpub = 0x043587CF;
-        bip32HeaderP2PKHpriv = 0x04358394;
+        packetMagic = 0xfabfb5da;
+        addressHeader = 111;
+        dumpedPrivateKeyHeader = 239;
     }
 
-    private static DogecoinRegNetParams instance;
-    public static synchronized DogecoinRegNetParams get() {
+    @Override
+    public boolean allowEmptyPeerChain() {
+        return true;
+    }
+
+    private static Block genesis;
+
+    @Override
+    public Block getGenesisBlock() {
+        synchronized (DogecoinRegTestParams.class) {
+            if (genesis == null) {
+                genesis = super.getGenesisBlock();
+                genesis.setNonce(2);
+                genesis.setDifficultyTarget(0x207fffffL);
+                genesis.setTime(1296688602L);
+                checkState(genesis.getVersion() == 1);
+                checkState(genesis.getHashAsString().toLowerCase().equals("3d2160a3b5dc4a9d62e7e66a295f70313ac808440ef7400d6c0772171ce973a5"));
+                genesis.verifyHeader();
+            }
+            return genesis;
+        }
+    }
+
+    private static DogecoinRegTestParams instance;
+
+    public static synchronized DogecoinRegTestParams get() {
         if (instance == null) {
-            instance = new DogecoinRegNetParams();
+            instance = new DogecoinRegTestParams();
         }
         return instance;
     }
 
     @Override
-    public boolean allowMinDifficultyBlocks() {
-        return true;
-    }
-
-    @Override
     public String getPaymentProtocolId() {
-        // TODO: CHANGE ME
-        return PAYMENT_PROTOCOL_ID_REGTEST;
+        return ID_DOGE_REGTEST;
     }
 
     @Override
-    public boolean isRegNet() {
-        return true;
-        
-        */
-    
-    
+    /** the testnet rules don't work for regtest, where difficulty stays the same */
+    public long calculateNewDifficultyTarget(StoredBlock storedPrev, Block nextBlock, BlockStore blockStore)
+            throws VerificationException, BlockStoreException {
+        final Block prev = storedPrev.getHeader();
+        return prev.getDifficultyTarget();
+    }
+
+    @Override
+    public boolean allowMinDifficultyBlocks() {
+        return false;
+    }
+
+    @Override
+    public boolean isTestNet() {
+        return false;
     }
 }
