@@ -32,6 +32,9 @@ import static com.google.common.base.Preconditions.checkState;
  * Dogecoin versions.
  */
 public class DogecoinRegNetParams extends AbstractDogecoinParams {
+  
+    
+    /*
     public static final int TESTNET_MAJORITY_WINDOW = 1000;
     public static final int TESTNET_MAJORITY_REJECT_BLOCK_OUTDATED = 750;
     public static final int TESTNET_MAJORITY_ENFORCE_BLOCK_UPGRADE = 501;
@@ -93,5 +96,9 @@ public class DogecoinRegNetParams extends AbstractDogecoinParams {
     @Override
     public boolean isRegNet() {
         return true;
+        
+        */
+    
+    
     }
 }
