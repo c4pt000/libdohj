@@ -90,6 +90,9 @@ public abstract class AbstractDogecoinParams extends NetworkParameters implement
     public static final String ID_DOGE_MAINNET = "org.dogecoin.production";
     /** The string returned by getId() for the testnet. */
     public static final String ID_DOGE_TESTNET = "org.dogecoin.test";
+    
+        public static final String ID_DOGE_REGNET = "org.dogecoin.regnet";
+
 
     protected final int newInterval;
     protected final int newTargetTimespan;
