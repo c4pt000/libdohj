@@ -40,7 +40,7 @@ public class DogecoinRegTestParams extends DogecoinTestNet3Params {
         maxTarget = MAX_TARGET;
         subsidyDecreaseBlockCount = 150;
         port = 18444;
-        id = ID_DOGE_REGTEST;
+        id = ID_DOGE_TESTNET;
         packetMagic = 0xfabfb5da;
         addressHeader = 111;
         dumpedPrivateKeyHeader = 239;
@@ -80,7 +80,7 @@ public class DogecoinRegTestParams extends DogecoinTestNet3Params {
 
     @Override
     public String getPaymentProtocolId() {
-        return ID_DOGE_REGTEST;
+        return ID_DOGE_TESTNET;
     }
 
     @Override
