@@ -1,6 +1,6 @@
  [![Build Status](https://travis-ci.org/dogecoin/libdohj.svg?branch=master)](https://travis-ci.org/dogecoin/libdohj)
 
-code for myself,
+  code really built for myself for experimentation of radiocoin ,
 ```
 customization of libdohj to support radiocoin-android and other functions where a modified version of "bitcoinj" is needed for a java library in this case dogecoin java library "libdohj" for interoperability,
 ```
