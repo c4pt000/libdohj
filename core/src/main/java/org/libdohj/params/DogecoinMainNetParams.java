@@ -92,7 +92,7 @@ public class DogecoinMainNetParams extends AbstractDogecoinParams {
     @Override
     public String getPaymentProtocolId() {
         // TODO: CHANGE THIS
-        return ID_DOGE_MAINNET;
+        return PAYMENT_PROTOCOL_ID_MAINNET;
     }
 
     @Override
