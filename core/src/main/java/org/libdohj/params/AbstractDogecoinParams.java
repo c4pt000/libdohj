@@ -87,7 +87,7 @@ public abstract class AbstractDogecoinParams extends NetworkParameters implement
     }
 
     /** The string returned by getId() for the main, production network where people trade things. */
-    public static final String PAYMENT_PROTOCOL_ID_MAINNET = "org.radiocoin.production";
+    public static final String PAYMENT_PROTOCOL_ID_MAINNET = "org.dogecoin.production";
     /** The string returned by getId() for the testnet. */
     public static final String PAYMENT_PROTOCOL_ID_TESTNET = "org.dogecoin.test";
     
