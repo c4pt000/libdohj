@@ -47,7 +47,7 @@ public class DogecoinMainNetParams extends AbstractDogecoinParams {
         genesisBlock.setDifficultyTarget(0x1e0ffff0L);
         genesisBlock.setTime(1622171724L);
         genesisBlock.setNonce(491158L);
-        id = ID_DOGE_MAINNET;
+        id = PAYMENT_PROTOCOL_ID_MAINNET;
         subsidyDecreaseBlockCount = 100000;
         spendableCoinbaseDepth = 10;
 

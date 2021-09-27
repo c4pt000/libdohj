@@ -40,7 +40,7 @@ public class DogecoinRegTestParams extends DogecoinTestNet3Params {
         maxTarget = MAX_TARGET;
         subsidyDecreaseBlockCount = 150;
         port = 18444;
-        id = ID_DOGE_REGTEST;
+        id = PAYMENT_PROTOCOL_ID_REGTEST;
         packetMagic = 0xfabfb5da;
         addressHeader = 111;
         dumpedPrivateKeyHeader = 239;

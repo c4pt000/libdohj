@@ -35,7 +35,7 @@ public class DogecoinTestNet3Params extends AbstractDogecoinParams {
 
     public DogecoinTestNet3Params() {
         super(DIFFICULTY_CHANGE_TARGET);
-        id = ID_DOGE_TESTNET;
+        id = PAYMENT_PROTOCOL_ID_TESTNET;
 
         packetMagic = 0xfcc1b7dc;
 
