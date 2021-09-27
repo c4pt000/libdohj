@@ -87,7 +87,7 @@ public abstract class AbstractDogecoinParams extends NetworkParameters implement
     }
 
     /** The string returned by getId() for the main, production network where people trade things. */
-    public static final String PAYMENT_PROTOCOL_ID_MAINNET = "org.dogecoin.production";
+    public static final String PAYMENT_PROTOCOL_ID_MAINNET = "org.radiocoin.production";
     /** The string returned by getId() for the testnet. */
     public static final String PAYMENT_PROTOCOL_ID_TESTNET = "org.dogecoin.test";
     
@@ -110,7 +110,7 @@ public abstract class AbstractDogecoinParams extends NetworkParameters implement
     */
     
         public static final int DOGECOIN_PROTOCOL_VERSION_AUXPOW = 70003;
-    public static final int DOGECOIN_PROTOCOL_VERSION_CURRENT = 70003;
+    public static final int DOGECOIN_PROTOCOL_VERSION_CURRENT = 70012;
     //5B recheck this soon of actual big number of supply of coin
    private static final Coin BASE_SUBSIDY   = COIN.multiply(500000);
     private static final Coin STABLE_SUBSIDY = COIN.multiply(10000);
