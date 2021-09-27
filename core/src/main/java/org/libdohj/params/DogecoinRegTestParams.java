@@ -80,7 +80,7 @@ public class DogecoinRegTestParams extends DogecoinTestNet3Params {
 
     @Override
     public String getPaymentProtocolId() {
-        return ID_DOGE_REGTEST;
+        return PAYMENT_PROTOCOL_ID_REGTEST;
     }
 
     @Override
