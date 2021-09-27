@@ -18,7 +18,12 @@ package org.libdohj.params;
 
 import org.bitcoinj.core.Sha256Hash;
 
-import static com.google.common.base.Preconditions.checkState;
+import org.bitcoinj.core.*;
+import org.bitcoinj.net.discovery.*;
+
+import java.net.*;
+
+import static com.google.common.base.Preconditions.*;
 
 /**
  * Parameters for the main Dogecoin production network on which people trade
