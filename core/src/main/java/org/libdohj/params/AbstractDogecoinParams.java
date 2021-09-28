@@ -110,7 +110,7 @@ public abstract class AbstractDogecoinParams extends NetworkParameters implement
     */
     
         public static final int DOGECOIN_PROTOCOL_VERSION_AUXPOW = 70003;
-    public static final int DOGECOIN_PROTOCOL_VERSION_CURRENT = 70012;
+    public static final int DOGECOIN_PROTOCOL_VERSION_CURRENT = 70003;
     //5B recheck this soon of actual big number of supply of coin
    private static final Coin BASE_SUBSIDY   = COIN.multiply(10000000);
     private static final Coin STABLE_SUBSIDY = COIN.multiply(10000);
