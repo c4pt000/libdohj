@@ -205,7 +205,7 @@ public abstract class AbstractDogecoinParams extends NetworkParameters implement
 
     @Override
     public String getUriScheme() {
-        return "radiocoin";
+        return "";
     }
 
     @Override
