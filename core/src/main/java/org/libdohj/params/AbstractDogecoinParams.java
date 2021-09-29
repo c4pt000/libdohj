@@ -203,9 +203,10 @@ public abstract class AbstractDogecoinParams extends NetworkParameters implement
         return Coin.COIN;
     }
 
+    //part of the prefix here such as radiocoin:<ADDRESS> when generating a QR code for URI import
     @Override
     public String getUriScheme() {
-        return "radiocoin";
+        return "";
     }
 
     @Override
