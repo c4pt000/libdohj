@@ -206,7 +206,7 @@ public abstract class AbstractDogecoinParams extends NetworkParameters implement
     //part of the prefix here such as radiocoin:<ADDRESS> when generating a QR code for URI import
     @Override
     public String getUriScheme() {
-        return "";
+        return "THE FREE VERSION DOES NOT SUPPORT ANDROID TO ANDROID (ONLY ANDROID TO DESKTOP) UPGRADE TO PAID";
     }
 
     @Override
