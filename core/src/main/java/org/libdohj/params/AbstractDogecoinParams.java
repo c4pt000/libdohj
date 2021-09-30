@@ -207,9 +207,9 @@ public abstract class AbstractDogecoinParams extends NetworkParameters implement
     //paid and free "block" of scanning the QR deposit address from the free android QR for Google Play console app of Radiocoin Wallet
     @Override
     public String getUriScheme() {
-    //    return "THE FREE VERSION DOES NOT SUPPORT ANDROID TO ANDROID (ONLY ANDROID TO DESKTOP) UPGRADE TO PAID";
+        return "THE FREE VERSION DOES NOT SUPPORT ANDROID TO ANDROID (ONLY ANDROID TO DESKTOP) UPGRADE TO PAID";
         
-             return "";
+       //      return "";
 
     }
 
