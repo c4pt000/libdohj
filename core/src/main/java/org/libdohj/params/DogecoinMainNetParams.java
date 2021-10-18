@@ -37,19 +37,17 @@ public class DogecoinMainNetParams extends AbstractDogecoinParams {
     public static final int MAINNET_MAJORITY_WINDOW = 2000;
     public static final int MAINNET_MAJORITY_REJECT_BLOCK_OUTDATED = 1900;
     public static final int MAINNET_MAJORITY_ENFORCE_BLOCK_UPGRADE = 1500;
-    protected static final int DIFFICULTY_CHANGE_TARGET = 100000;
-    
-    
-  
     private static final long GENESIS_TIME = 1622171724;
     private static final long GENESIS_NONCE = 491158;
     private static final Sha256Hash GENESIS_HASH = Sha256Hash.wrap("000007ce46e6c59844c34fa7ba5b27c8dac0653a27fcfb7340cc0158849e4afd");
 
- public static final long STANDARD_MAX_DIFFICULTY_TARGET = 0x1e0ffff0L;
+    public static final long STANDARD_MAX_DIFFICULTY_TARGET = 0x1e0ffff0L;
 
+    protected static final int DIFFICULTY_CHANGE_TARGET = 100000;
 
     public DogecoinMainNetParams() {
-        super(DIFFICULTY_CHANGE_TARGET);
+        super();
+        id = ID_MAINNET;
 
         targetTimespan = TARGET_TIMESPAN;
         maxTarget = Utils.decodeCompactBits(STANDARD_MAX_DIFFICULTY_TARGET);
@@ -69,7 +67,6 @@ public class DogecoinMainNetParams extends AbstractDogecoinParams {
         genesisBlock.setDifficultyTarget(0x1e0ffff0L);
         genesisBlock.setTime(1622171724L);
         genesisBlock.setNonce(491158L);
-        id = ID_MAINNET;
         subsidyDecreaseBlockCount = 100000;
         spendableCoinbaseDepth = 10;
 
@@ -105,12 +102,11 @@ public class DogecoinMainNetParams extends AbstractDogecoinParams {
         }
         return instance;
     }
-
-     @Override
+@Override
     public Block getGenesisBlock() {
         synchronized (GENESIS_HASH) {
             if (genesisBlock == null) {
-                //genesisBlock = Block.createGenesis(this);
+                genesisBlock = Block.createGenesis(this);
                 genesisBlock.setDifficultyTarget(STANDARD_MAX_DIFFICULTY_TARGET);
                 genesisBlock.setTime(GENESIS_TIME);
                 genesisBlock.setNonce(GENESIS_NONCE);
