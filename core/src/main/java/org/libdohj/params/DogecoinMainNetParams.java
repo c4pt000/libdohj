@@ -34,6 +34,14 @@ public class DogecoinMainNetParams extends AbstractDogecoinParams {
     public static final int MAINNET_MAJORITY_REJECT_BLOCK_OUTDATED = 1900;
     public static final int MAINNET_MAJORITY_ENFORCE_BLOCK_UPGRADE = 1500;
     protected static final int DIFFICULTY_CHANGE_TARGET = 100000;
+    
+    
+  
+    private static final long GENESIS_TIME = 1622171724;
+    private static final long GENESIS_NONCE = 491158;
+    private static final Sha256Hash GENESIS_HASH = Sha256Hash.wrap("000007ce46e6c59844c34fa7ba5b27c8dac0653a27fcfb7340cc0158849e4afd");
+
+
 
     public DogecoinMainNetParams() {
         super(DIFFICULTY_CHANGE_TARGET);
