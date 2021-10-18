@@ -110,8 +110,7 @@ public class DogecoinMainNetParams extends AbstractDogecoinParams {
     public Block getGenesisBlock() {
         synchronized (GENESIS_HASH) {
             if (genesisBlock == null) {
-                                genesisBlock = Block.createGenesis(this);
-
+                //genesisBlock = Block.createGenesis(this);
                 genesisBlock.setDifficultyTarget(STANDARD_MAX_DIFFICULTY_TARGET);
                 genesisBlock.setTime(GENESIS_TIME);
                 genesisBlock.setNonce(GENESIS_NONCE);
