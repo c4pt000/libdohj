@@ -46,7 +46,8 @@ public class DogecoinMainNetParams extends AbstractDogecoinParams {
     protected static final int DIFFICULTY_CHANGE_TARGET = 100000;
 
     public DogecoinMainNetParams() {
-        super();
+        super(DIFFICULTY_CHANGE_TARGET);
+
         id = ID_MAINNET;
 
         targetTimespan = TARGET_TIMESPAN;
