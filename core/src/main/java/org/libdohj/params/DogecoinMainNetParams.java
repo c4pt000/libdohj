@@ -103,7 +103,9 @@ public class DogecoinMainNetParams extends AbstractDogecoinParams {
         }
         return instance;
     }
-@Override
+   
+    /*
+    @Override
     public Block getGenesisBlock() {
         synchronized (GENESIS_HASH) {
             if (genesisBlock == null) {
@@ -116,7 +118,7 @@ public class DogecoinMainNetParams extends AbstractDogecoinParams {
         }
         return genesisBlock;
     }
-
+*/
     
     @Override
     public boolean allowMinDifficultyBlocks() {
