@@ -16,14 +16,18 @@
 
 package org.libdohj.params;
 
+
+import java.net.URI;
+
+
+import org.bitcoinj.core.Block;
+import org.bitcoinj.core.ECKey;
 import org.bitcoinj.core.Sha256Hash;
+import org.bitcoinj.core.Utils;
+import org.bitcoinj.net.discovery.HttpDiscovery;
 
-import org.bitcoinj.core.*;
-import org.bitcoinj.net.discovery.*;
 
-import java.net.*;
-
-import static com.google.common.base.Preconditions.*;
+import static com.google.common.base.Preconditions.checkState;
 
 /**
  * Parameters for the main Dogecoin production network on which people trade
@@ -106,7 +110,8 @@ public class DogecoinMainNetParams extends AbstractDogecoinParams {
     public Block getGenesisBlock() {
         synchronized (GENESIS_HASH) {
             if (genesisBlock == null) {
-                genesisBlock = createGenesis(this);
+                                genesisBlock = Block.createGenesis(this);
+
                 genesisBlock.setDifficultyTarget(STANDARD_MAX_DIFFICULTY_TARGET);
                 genesisBlock.setTime(GENESIS_TIME);
                 genesisBlock.setNonce(GENESIS_NONCE);
