@@ -45,6 +45,10 @@ public class DogecoinMainNetParams extends AbstractDogecoinParams {
 
     public DogecoinMainNetParams() {
         super(DIFFICULTY_CHANGE_TARGET);
+
+        targetTimespan = TARGET_TIMESPAN;
+        maxTarget = Utils.decodeCompactBits(Block.STANDARD_MAX_DIFFICULTY_TARGET);
+
         // not in this case would be 188 ... since 60 + 128 = 188 .......in this case its my own weird thing that still works as 30 + 128 for 158 from the standard desktop qt wallet from dogecoin actually using the proper value of address_prefix + 128(still works for radiocoin-qt as 158 as a customized value to decode the private key from address_prefix 60 "R")
         dumpedPrivateKeyHeader = 158; //This is always addressHeader + 128
         addressHeader = 60;
