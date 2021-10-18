@@ -41,6 +41,7 @@ public class DogecoinMainNetParams extends AbstractDogecoinParams {
     private static final long GENESIS_NONCE = 491158;
     private static final Sha256Hash GENESIS_HASH = Sha256Hash.wrap("000007ce46e6c59844c34fa7ba5b27c8dac0653a27fcfb7340cc0158849e4afd");
 
+ public static final long STANDARD_MAX_DIFFICULTY_TARGET = 0x1e0ffff0L;
 
 
     public DogecoinMainNetParams() {
