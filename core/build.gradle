@@ -10,7 +10,7 @@ dependencies {
 // check to remote link note to myself *private
 // https://github.com/c4pt000/bitcoinj-radiocoin-android-wallet-working/releases/tag/bitcoinj-eb2abf9
 
-    implementation 'com.github.c4pt000:bitcoinj:8e591d9'
+    implementation 'com.github.c4pt000:bitcoinj:29f932a'
 
     implementation 'com.madgag.spongycastle:core:1.58.0.0'
     implementation 'com.google.guava:guava:30.0-android'
