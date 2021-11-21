@@ -117,7 +117,7 @@ public abstract class AbstractDogecoinParams extends NetworkParameters implement
 
     public AbstractDogecoinParams(final int setDiffChangeTarget) {
         super();
-        genesisBlock = createGenesis(this);
+        genesisBlock = createGenesisTransaction(this);
         interval = DOGE_INTERVAL;
         newInterval = DOGE_INTERVAL_NEW;
         targetTimespan = DOGE_TARGET_TIMESPAN;
