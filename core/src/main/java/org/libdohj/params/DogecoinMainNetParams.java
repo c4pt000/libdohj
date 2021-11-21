@@ -33,7 +33,7 @@ import static com.google.common.base.Preconditions.checkState;
  * Parameters for the main Dogecoin production network on which people trade
  * goods and services.
  */
-public abstract class DogecoinMainNetParams extends AbstractDogecoinParams {
+public class DogecoinMainNetParams extends AbstractDogecoinParams {
     public static final int MAINNET_MAJORITY_WINDOW = 2000;
     public static final int MAINNET_MAJORITY_REJECT_BLOCK_OUTDATED = 1900;
     public static final int MAINNET_MAJORITY_ENFORCE_BLOCK_UPGRADE = 1500;
