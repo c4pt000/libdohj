@@ -27,7 +27,7 @@ import static com.google.common.base.Preconditions.checkState;
  * relaxed rules suitable for development and testing of applications and new
  * Dogecoin versions.
  */
-public class DogecoinTestNet3Params extends AbstractDogecoinParams {
+public abstract class DogecoinTestNet3Params extends AbstractDogecoinParams {
     public static final int TESTNET_MAJORITY_WINDOW = 1000;
     public static final int TESTNET_MAJORITY_REJECT_BLOCK_OUTDATED = 750;
     public static final int TESTNET_MAJORITY_ENFORCE_BLOCK_UPGRADE = 501;
