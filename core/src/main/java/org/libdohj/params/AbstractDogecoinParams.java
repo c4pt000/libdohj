@@ -117,7 +117,7 @@ public abstract class AbstractDogecoinParams extends NetworkParameters implement
 
     public AbstractDogecoinParams(final int setDiffChangeTarget) {
         super();
-        genesisBlock = createGenesisTransaction(this);
+        genesisBlock = createGenesis(this);
         interval = DOGE_INTERVAL;
         newInterval = DOGE_INTERVAL_NEW;
         targetTimespan = DOGE_TARGET_TIMESPAN;
@@ -136,7 +136,7 @@ public abstract class AbstractDogecoinParams extends NetworkParameters implement
         //bip32HeaderP2PKHpriv = 0x0488E1F4; //The 4 byte header that serializes in base58 to "xprv" (?)
     }
 
-    private static AltcoinBlock createGenesisTransaction(NetworkParameters params) {
+    private static AltcoinBlock createGenesis(NetworkParameters params) {
         AltcoinBlock genesisBlock = new AltcoinBlock(params, Block.BLOCK_VERSION_GENESIS);
         Transaction t = new Transaction(params);
         try {
