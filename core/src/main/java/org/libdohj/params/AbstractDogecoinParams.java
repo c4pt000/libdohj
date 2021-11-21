@@ -136,7 +136,7 @@ public abstract class AbstractDogecoinParams extends NetworkParameters implement
         //bip32HeaderP2PKHpriv = 0x0488E1F4; //The 4 byte header that serializes in base58 to "xprv" (?)
     }
 
-    private static AltcoinBlock createGenesis(NetworkParameters params) {
+    private static AltcoinBlock createGenesisTransaction(NetworkParameters params) {
         AltcoinBlock genesisBlock = new AltcoinBlock(params, Block.BLOCK_VERSION_GENESIS);
         Transaction t = new Transaction(params);
         try {
