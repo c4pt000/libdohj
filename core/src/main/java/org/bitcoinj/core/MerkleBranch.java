@@ -1,3 +1,4 @@
+ 
 /**
  * Copyright 2011 Google Inc.
  * Copyright 2014 Andreas Schildbach
@@ -96,7 +97,7 @@ public class MerkleBranch extends ChildMessage {
     protected void parse() throws ProtocolException {
         cursor = offset;
 
-        final int hashCount = readVarInt();
+        final int hashCount = ((int) readVarInt());
         optimalEncodingMessageSize += VarInt.sizeOf(hashCount);
         hashes = new ArrayList<Sha256Hash>(hashCount);
         for (int hashIdx = 0; hashIdx < hashCount; hashIdx++) {
