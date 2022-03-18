@@ -97,7 +97,9 @@ public class MerkleBranch extends ChildMessage {
     protected void parse() throws ProtocolException {
         cursor = offset;
 
-        final int hashCount = ((int) readVarInt());
+        protected static final int hashCount = (int) readVarInt();
+        //final int
+         //hashCount = readVarInt());
         optimalEncodingMessageSize += VarInt.sizeOf(hashCount);
         hashes = new ArrayList<Sha256Hash>(hashCount);
         for (int hashIdx = 0; hashIdx < hashCount; hashIdx++) {
