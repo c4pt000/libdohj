@@ -144,11 +144,13 @@ public abstract class AbstractDogecoinParams extends NetworkParameters implement
                 // could be byte flipped here differently f0ff0f1e0 "1e0f
                                                                      //fff0" , 10 for 16 bytes by psz. starts with 04 for byte padding 
                  // 04f0ff0f1e010410526164696f436f696e2077616c6c6574
-                ("04f0ff0f1e010410526164696f436f696e2077616c6c6574");
-            t.addInput(new TransactionInput(params, t, bytes));
+               // ("04 f0ff0f1e 01 04 10 526164696f436f696e2077616c6c6574");
+           	("04f0ff0f1e01043c4269746e657420737570706f7274696e67206368616e67657320746f2074686520426974636f696e206e6574776f726b20616e64206265796f6e6421");
+		 t.addInput(new TransactionInput(params, t, bytes));
             ByteArrayOutputStream scriptPubKeyBytes = new ByteArrayOutputStream();
             Script.writeBytes(scriptPubKeyBytes, Utils.HEX.decode
-                    ("046b8e36534122449a1d0c0c2b380647b23b562fb0be95b698596a2507eb6aa5c5dba4294bc39f31b3b2351994673ce150449ad83bce4b7624b7c488f6ca23aa71"));
+                  ("047dca2902dff8dc8f6f34f9f3741ca6f7a568d383059853bf0aaa5511af402ed929dc56a4c14f9a1d4447e8d5a08a2c9e26f6818d146cfbf55d496b9351f773b9"));  
+		//("046b8e36534122449a1d0c0c2b380647b23b562fb0be95b698596a2507eb6aa5c5dba4294bc39f31b3b2351994673ce150449ad83bce4b7624b7c488f6ca23aa71"));
             scriptPubKeyBytes.write(ScriptOpCodes.OP_CHECKSIG);
             t.addOutput(new TransactionOutput(params, t, COIN.multiply(88), scriptPubKeyBytes.toByteArray()));
         } catch (Exception e) {
