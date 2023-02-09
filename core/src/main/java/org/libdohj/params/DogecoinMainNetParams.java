@@ -66,8 +66,8 @@ public class DogecoinMainNetParams extends AbstractDogecoinParams {
         bip32HeaderP2PKHpub = 0x02facafd; //The 4 byte header that serializes in base58 to "dgub".
         bip32HeaderP2PKHpriv =  0x02fac398; //The 4 byte header that serializes in base58 to "dgpv".
         genesisBlock.setDifficultyTarget(0x1e0ffff0L);
-        genesisBlock.setTime(1622171724L);
-        genesisBlock.setNonce(491158L);
+        genesisBlock.setTime(1675886721L);
+        genesisBlock.setNonce(1195632L);
         subsidyDecreaseBlockCount = 100000;
         spendableCoinbaseDepth = 10;
 
