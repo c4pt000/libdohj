@@ -51,7 +51,7 @@ public  class DogecoinTestNet3Params extends AbstractDogecoinParams {
         spendableCoinbaseDepth = 10;
         subsidyDecreaseBlockCount = 100000;
         String genesisHash = genesisBlock.getHashAsString();
-        checkState(genesisHash.equals("00000a2ee9363d21e47bc10d5b1e39d4ae4bd950491790e522f90dad86d2d1eb"));
+        checkState(genesisHash.equals("00000a3c106109877cca71fb172796779090fb34d49147b2761a5ba8f451dfc3"));
 
         majorityEnforceBlockUpgrade = TESTNET_MAJORITY_ENFORCE_BLOCK_UPGRADE;
         majorityRejectBlockOutdated = TESTNET_MAJORITY_REJECT_BLOCK_OUTDATED;
