@@ -91,8 +91,15 @@ public class DogecoinMainNetParams extends AbstractDogecoinParams {
         
   // ?? risky business readding dogecoin dns seeds here to attempt experimentation with peer to peer "bloom filter bit" that might be missing from radiocoin dns seed points for android wallet support (in experimentation to match protocol header)
         dnsSeeds = new String[] {
-                "radiopool.me",
-            "46.101.169.238",
+                "multidoge.org",
+            "seed.multidoge.org",
+            "seed01.altcoinbuilders.com",
+            "seed02.altcoinbuilders.com",
+            "seed03.altcoinbuilders.com",
+            "seed04.altcoinbuilders.com",
+            "170.187.167.146",
+            
+            
             };
     }
     private static DogecoinMainNetParams instance;
