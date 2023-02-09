@@ -11,9 +11,12 @@ dependencies {
 // https://github.com/c4pt000/bitcoinj-radiocoin-android-wallet-working/releases/tag/bitcoinj-eb2abf9
 
    // implementation 'com.github.c4pt000:bitcoinj:6c67fee'
-   
-   implementation 'com.github.c4pt000:bitcoinj:08067d0'
-   
+   //last working below
+   //implementation 'com.github.c4pt000:bitcoinj:08067d0'
+      
+      
+      implementation 'com.github.c4pt000:bitcoinj:cd17cd1'
+
     implementation 'com.madgag.spongycastle:core:1.58.0.0'
     implementation 'com.google.guava:guava:30.0-android'
     implementation 'com.lambdaworks:scrypt:1.4.0'
