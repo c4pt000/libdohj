@@ -1374,7 +1374,7 @@ public final class Protos {
 
       public Builder clear() {
         super.clear();
-        genesis_ = "000007ce46e6c59844c34fa7ba5b27c8dac0653a27fcfb7340cc0158849e4afd";
+        genesis_ = "0000049008321e63472304c0fc8d3937b7679cdb2144f8ebe8b8fb29e4deae94";
         bitField0_ = (bitField0_ & ~0x00000001);
         if (outputsBuilder_ == null) {
           outputs_ = java.util.Collections.emptyList();
@@ -1556,7 +1556,7 @@ public final class Protos {
       }
       private int bitField0_;
 
-      private java.lang.Object genesis_ = "000007ce46e6c59844c34fa7ba5b27c8dac0653a27fcfb7340cc0158849e4afd";
+      private java.lang.Object genesis_ = "0000049008321e63472304c0fc8d3937b7679cdb2144f8ebe8b8fb29e4deae94";
       /**
        * <code>optional string genesis = 1 [default = "000007ce46e6c59844c34fa7ba5b27c8dac0653a27fcfb7340cc0158849e4afd"];</code>
        *
