@@ -1166,7 +1166,8 @@ public final class Protos {
     }
 
     private void initFields() {
-      genesis_ = "000007ce46e6c59844c34fa7ba5b27c8dac0653a27fcfb7340cc0158849e4afd";
+     // genesis_ = "000007ce46e6c59844c34fa7ba5b27c8dac0653a27fcfb7340cc0158849e4afd";
+      genesis_ = "0000049008321e63472304c0fc8d3937b7679cdb2144f8ebe8b8fb29e4deae94";
       outputs_ = java.util.Collections.emptyList();
       time_ = 0L;
       expires_ = 0L;
