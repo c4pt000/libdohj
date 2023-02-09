@@ -1,13 +1,4 @@
-
-*note stable sync for android wallet
-
-```
-
-implementation 'com.github.c4pt000:libdohj:0d3758e'
-implementation 'com.github.c4pt000:bitcoinj:6b19776'
-```
-
-[![Build Status](https://travis-ci.org/dogecoin/libdohj.svg?branch=master)](https://travis-ci.org/dogecoin/libdohj)
+ [![Build Status](https://travis-ci.org/dogecoin/libdohj.svg?branch=master)](https://travis-ci.org/dogecoin/libdohj)
 
   code really modified for myself in order to experiment with building some apps for radiocoin ,
 ```
