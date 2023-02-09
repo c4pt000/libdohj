@@ -571,7 +571,7 @@ public final class Protos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string genesis = 1 [default = "0000049008321e63472304c0fc8d3937b7679cdb2144f8ebe8b8fb29e4deae94"];</code>
+     * <code>optional string genesis = 1 [default = "000007ce46e6c59844c34fa7ba5b27c8dac0653a27fcfb7340cc0158849e4afd"];</code>
      *
      * <pre>
      * Hash of the network genesis block
@@ -579,7 +579,7 @@ public final class Protos {
      */
     boolean hasGenesis();
     /**
-     * <code>optional string genesis = 1 [default = "0000049008321e63472304c0fc8d3937b7679cdb2144f8ebe8b8fb29e4deae94"];</code>
+     * <code>optional string genesis = 1 [default = "000007ce46e6c59844c34fa7ba5b27c8dac0653a27fcfb7340cc0158849e4afd"];</code>
      *
      * <pre>
      * Hash of the network genesis block
@@ -587,7 +587,7 @@ public final class Protos {
      */
     java.lang.String getGenesis();
     /**
-     * <code>optional string genesis = 1 [default = "0000049008321e63472304c0fc8d3937b7679cdb2144f8ebe8b8fb29e4deae94"];</code>
+     * <code>optional string genesis = 1 [default = "000007ce46e6c59844c34fa7ba5b27c8dac0653a27fcfb7340cc0158849e4afd"];</code>
      *
      * <pre>
      * Hash of the network genesis block
@@ -882,7 +882,7 @@ public final class Protos {
     public static final int GENESIS_FIELD_NUMBER = 1;
     private java.lang.Object genesis_;
     /**
-     * <code>optional string genesis = 1 [default = "0000049008321e63472304c0fc8d3937b7679cdb2144f8ebe8b8fb29e4deae94"];</code>
+     * <code>optional string genesis = 1 [default = "000007ce46e6c59844c34fa7ba5b27c8dac0653a27fcfb7340cc0158849e4afd"];</code>
      *
      * <pre>
      * Hash of the network genesis block
@@ -892,7 +892,7 @@ public final class Protos {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>optional string genesis = 1 [default = "0000049008321e63472304c0fc8d3937b7679cdb2144f8ebe8b8fb29e4deae94"];</code>
+     * <code>optional string genesis = 1 [default = "000007ce46e6c59844c34fa7ba5b27c8dac0653a27fcfb7340cc0158849e4afd"];</code>
      *
      * <pre>
      * Hash of the network genesis block
@@ -913,7 +913,7 @@ public final class Protos {
       }
     }
     /**
-     * <code>optional string genesis = 1 [default = "0000049008321e63472304c0fc8d3937b7679cdb2144f8ebe8b8fb29e4deae94"];</code>
+     * <code>optional string genesis = 1 [default = "000007ce46e6c59844c34fa7ba5b27c8dac0653a27fcfb7340cc0158849e4afd"];</code>
      *
      * <pre>
      * Hash of the network genesis block
@@ -1166,7 +1166,7 @@ public final class Protos {
     }
 
     private void initFields() {
-      genesis_ = "0000049008321e63472304c0fc8d3937b7679cdb2144f8ebe8b8fb29e4deae94";
+      genesis_ = "000007ce46e6c59844c34fa7ba5b27c8dac0653a27fcfb7340cc0158849e4afd";
       outputs_ = java.util.Collections.emptyList();
       time_ = 0L;
       expires_ = 0L;
@@ -1373,7 +1373,7 @@ public final class Protos {
 
       public Builder clear() {
         super.clear();
-        genesis_ = "0000049008321e63472304c0fc8d3937b7679cdb2144f8ebe8b8fb29e4deae94";
+        genesis_ = "000007ce46e6c59844c34fa7ba5b27c8dac0653a27fcfb7340cc0158849e4afd";
         bitField0_ = (bitField0_ & ~0x00000001);
         if (outputsBuilder_ == null) {
           outputs_ = java.util.Collections.emptyList();
@@ -1555,9 +1555,9 @@ public final class Protos {
       }
       private int bitField0_;
 
-      private java.lang.Object genesis_ = "0000049008321e63472304c0fc8d3937b7679cdb2144f8ebe8b8fb29e4deae94";
+      private java.lang.Object genesis_ = "000007ce46e6c59844c34fa7ba5b27c8dac0653a27fcfb7340cc0158849e4afd";
       /**
-       * <code>optional string genesis = 1 [default = "0000049008321e63472304c0fc8d3937b7679cdb2144f8ebe8b8fb29e4deae94"];</code>
+       * <code>optional string genesis = 1 [default = "000007ce46e6c59844c34fa7ba5b27c8dac0653a27fcfb7340cc0158849e4afd"];</code>
        *
        * <pre>
        * Hash of the network genesis block
@@ -1567,7 +1567,7 @@ public final class Protos {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>optional string genesis = 1 [default = "0000049008321e63472304c0fc8d3937b7679cdb2144f8ebe8b8fb29e4deae94"];</code>
+       * <code>optional string genesis = 1 [default = "000007ce46e6c59844c34fa7ba5b27c8dac0653a27fcfb7340cc0158849e4afd"];</code>
        *
        * <pre>
        * Hash of the network genesis block
@@ -1588,7 +1588,7 @@ public final class Protos {
         }
       }
       /**
-       * <code>optional string genesis = 1 [default = "0000049008321e63472304c0fc8d3937b7679cdb2144f8ebe8b8fb29e4deae94"];</code>
+       * <code>optional string genesis = 1 [default = "000007ce46e6c59844c34fa7ba5b27c8dac0653a27fcfb7340cc0158849e4afd"];</code>
        *
        * <pre>
        * Hash of the network genesis block
@@ -1608,7 +1608,7 @@ public final class Protos {
         }
       }
       /**
-       * <code>optional string genesis = 1 [default = "0000049008321e63472304c0fc8d3937b7679cdb2144f8ebe8b8fb29e4deae94"];</code>
+       * <code>optional string genesis = 1 [default = "000007ce46e6c59844c34fa7ba5b27c8dac0653a27fcfb7340cc0158849e4afd"];</code>
        *
        * <pre>
        * Hash of the network genesis block
@@ -1625,7 +1625,7 @@ public final class Protos {
         return this;
       }
       /**
-       * <code>optional string genesis = 1 [default = "0000049008321e63472304c0fc8d3937b7679cdb2144f8ebe8b8fb29e4deae94"];</code>
+       * <code>optional string genesis = 1 [default = "000007ce46e6c59844c34fa7ba5b27c8dac0653a27fcfb7340cc0158849e4afd"];</code>
        *
        * <pre>
        * Hash of the network genesis block
@@ -1638,7 +1638,7 @@ public final class Protos {
         return this;
       }
       /**
-       * <code>optional string genesis = 1 [default = "0000049008321e63472304c0fc8d3937b7679cdb2144f8ebe8b8fb29e4deae94"];</code>
+       * <code>optional string genesis = 1 [default = "000007ce46e6c59844c34fa7ba5b27c8dac0653a27fcfb7340cc0158849e4afd"];</code>
        *
        * <pre>
        * Hash of the network genesis block
