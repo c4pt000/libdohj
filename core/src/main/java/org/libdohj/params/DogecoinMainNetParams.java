@@ -39,7 +39,7 @@ public class DogecoinMainNetParams extends AbstractDogecoinParams {
         super(DIFFICULTY_CHANGE_TARGET);
         // not in this case would be 188 ... since 60 + 128 = 188 .......in this case its my own weird thing that still works as 30 + 128 for 158 from the standard desktop qt wallet from dogecoin actually using the proper value of address_prefix + 128(still works for radiocoin-qt as 158 as a customized value to decode the private key from address_prefix 60 "R")
         dumpedPrivateKeyHeader = 158; //This is always addressHeader + 128
-        addressHeader = 60;
+        addressHeader = 25;
         p2shHeader = 22;
         port = 8333;
         packetMagic = 0xd1d1d1d1;
@@ -50,8 +50,8 @@ public class DogecoinMainNetParams extends AbstractDogecoinParams {
         bip32HeaderP2PKHpub = 0x02facafd; //The 4 byte header that serializes in base58 to "dgub".
         bip32HeaderP2PKHpriv =  0x02fac398; //The 4 byte header that serializes in base58 to "dgpv".
         genesisBlock.setDifficultyTarget(0x1e0ffff0L);
-        genesisBlock.setTime(1622171724L);
-        genesisBlock.setNonce(491158L);
+        genesisBlock.setTime(1675886721L);
+        genesisBlock.setNonce(1769621L);
         id = ID_MAINNET;
         subsidyDecreaseBlockCount = 100000;
         spendableCoinbaseDepth = 10;
@@ -59,7 +59,7 @@ public class DogecoinMainNetParams extends AbstractDogecoinParams {
         // Note this is an SHA256 hash, not a Scrypt hash. Scrypt hashes are only
         // used in difficulty calculations.
         String genesisHash = genesisBlock.getHashAsString();
-        checkState(genesisHash.equals("000007ce46e6c59844c34fa7ba5b27c8dac0653a27fcfb7340cc0158849e4afd"),
+        checkState(genesisHash.equals("0000049008321e63472304c0fc8d3937b7679cdb2144f8ebe8b8fb29e4deae94"),
                 genesisHash);
 
         majorityEnforceBlockUpgrade = MAINNET_MAJORITY_ENFORCE_BLOCK_UPGRADE;
@@ -70,13 +70,13 @@ public class DogecoinMainNetParams extends AbstractDogecoinParams {
         // transactions are handled. Duplicated transactions could occur in the case where a coinbase had the same
         // extraNonce and the same outputs but appeared at different heights, and greatly complicated re-org handling.
         // Having these here simplifies block connection logic considerably.
-        checkpoints.put(60000, Sha256Hash.wrap("cf23fe03d921012cfdfc2847bd6ef4a647bbb559d6eb57d6432d7bcb930d720f"));
+        //checkpoints.put(60000, Sha256Hash.wrap("cf23fe03d921012cfdfc2847bd6ef4a647bbb559d6eb57d6432d7bcb930d720f"));
 
         
         
   // ?? risky business readding dogecoin dns seeds here to attempt experimentation with peer to peer "bloom filter bit" that might be missing from radiocoin dns seed points for android wallet support (in experimentation to match protocol header)
         dnsSeeds = new String[] {
-                "radiopool.me",
+                "multidoge.org",
                
 
             };
