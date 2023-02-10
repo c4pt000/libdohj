@@ -62,7 +62,7 @@ public class DogecoinRegTestParams extends DogecoinTestNet3Params {
                 genesis.setDifficultyTarget(0x207fffffL);
                 genesis.setTime(1296688602L);
                 checkState(genesis.getVersion() == 1);
-                checkState(genesis.getHashAsString().toLowerCase().equals("1b38af7fac04373a2619b6f0e8f2fc73f45380fb98bef338b41fb64e893b9cd2"));
+                checkState(genesis.getHashAsString().toLowerCase().equals("62a8836adb34c8dfa69d0b37c602b4fe97475f174dfac2872ad375259552795f"));
                 genesis.verifyHeader();
             }
             return genesis;
